@@ -11,9 +11,12 @@ def insertion_sort(numbers):
         numbers[j+1] = key
     return numbers
 #########################################################
-# Get the input numbers as a list of integers
+  def IncreseSort_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    # Get the input numbers as a list of integers
     numbers = list(map(int, self.text_box_1.text.split(',')))
     # Call the server function to sort the numbers
     sorted_numbers = anvil.server.call('insertion_sort', numbers)
     # Display the sorted numbers in the output textbox
     self.text_box_2.text = ', '.join(map(str, sorted_numbers))
+    pass
